@@ -9,14 +9,14 @@
 
 from random import randint
 a = True
-LenList = int(input("Put here the list length: "))
+lenList = int(input("Put here the list length of your list: "))
 La = []
 Lb = []
 Lc = []
-while len(La) < LenList:
-    numInt = int(input("Give some number: "))
+while len(La) < lenList:
+    numInt = int(input("Enter some number: "))
     if numInt > 10:
-        print("Just numbers below 10!")
+        print("Just numbers below 10, please!")
     else:
         La.append(numInt)
         a = False
@@ -29,8 +29,8 @@ for i in La:
         Lc.append(i)
 
 Lc = [i for i in La if i in Lb]
-GreatestLa = max(La)
-GreatestLb = max(Lb)
+greatestLa = max(La)
+greatestLb = max(Lb)
 
 meanA = sum(La)/len(La)
 meanB = sum(Lb)/len(Lb)
@@ -44,4 +44,4 @@ print(f"A List: {La}")
 print(f"B List: {Lb}")
 print(f"Same number in both list: {Lc}")
 print(f"Major mean is {greatest}")
-print(f"Greatest value from List A and List B: {GreatestLa} and {GreatestLb}")
+print(f"Greatest value from List A and List B: {greatestLa} and {greatestLb}")
